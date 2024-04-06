@@ -67,7 +67,7 @@ const Navv = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/" className='text-center'>Home</Nav.Link>
-            <Nav.Link href="/compress-pdf" className='text-center'>CompressPdf</Nav.Link>
+            <Nav.Link href="/compresspdf" className='text-center'>CompressPdf</Nav.Link>
            
             
           </Nav>

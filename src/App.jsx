@@ -15,7 +15,7 @@ function App() {
       <Navv />
       <Routes>
         <Route path='/' element={<CompressPdf />} />
-        <Route path='/compress-pdf' element={<Home />} />
+        <Route path='/compresspdf' element={<Home />} />
         {/*
         <Route path='/image-to-pdf' element={<ImageToPdf />} />
         <Route path='/docx-to-pdf' element={<DocxToPdf />} />

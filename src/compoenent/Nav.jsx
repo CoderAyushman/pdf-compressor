@@ -66,10 +66,9 @@ const Navv = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/" className='text-center'>Home</Nav.Link>
-            <Nav.Link href="/compresspdf" className='text-center'>CompressPdf</Nav.Link>
+          <li className='nav-link'><NavLink className='nav-link' to="/"><h5>Home</h5></NavLink></li>
+          <li className='nav-link' ><NavLink className='nav-link' to="/compresspdf"><h5>CompressPdf</h5></NavLink></li>
            
-            
           </Nav>
         </Navbar.Collapse>
       </Container>

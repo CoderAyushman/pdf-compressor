@@ -16,8 +16,8 @@ function App() {
       <Routes>
         <Route path='/' element={<CompressPdf />} />
         <Route path='/compresspdf' element={<Home />} />
-        {/*
         <Route path='/image-to-pdf' element={<ImageToPdf />} />
+        {/*
         <Route path='/docx-to-pdf' element={<DocxToPdf />} />
         <Route path='/excel-to-pdf' element={<ExcelToPdf />} />
         <Route path='/ppt-to-pdf' element={<PptToPdf />} /> */}

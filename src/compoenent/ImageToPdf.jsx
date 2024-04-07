@@ -17,9 +17,9 @@ const ImageToPdf = () => {
         event.preventDefault();
 
         const formData = new FormData();
-        formData.append('imageFile', file);
+        formData.append('img', file);
         try {
-            const response = await axios.post('http://localhost:7000/upload', formData, {
+            const response = await axios.post('https://image-to-pdf-flask.vercel.app/api/upload', formData, {
                 responseType: 'arraybuffer',
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -47,7 +47,7 @@ const ImageToPdf = () => {
         </div>
 
             <form className='row g-3 ' onSubmit={handleOnSumbit}>
-                <input className='file-input' type="file" accept='image/*' onChange={handleFileChange} name='imageFile' />
+                <input className='file-input' type="file" accept='image/*' onChange={handleFileChange} name='img' />
                 <button type='sumbit'>Upload</button>
             </form>
 

@@ -23,8 +23,8 @@ const DocxToPdf = () => {
             event.preventDefault();
 
             const formData = new FormData();
-            formData.append('wordFile', pdfFile);
-            const response = await axios.post('http://localhost:4000/upload', formData, {
+            formData.append('docx', pdfFile);
+            const response = await axios.post('https://docx-to-pdf-flask-2.vercel.app/api/upload', formData, {
                 responseType: 'arraybuffer',
                 headers: {
                     'Content-Type': 'multipart/form-data',
@@ -50,7 +50,7 @@ const DocxToPdf = () => {
 
         </div>
             <form className='row g-3 ' onSubmit={handleOnSumbit}>
-                <input className='file-input' name='wordFile' type="file" accept='.docx' onChange={handleOnChange} />
+                <input className='file-input' name='docx' type="file" accept='.docx' onChange={handleOnChange} />
                 <button type='sumbit'>Upload</button>
             </form>
 

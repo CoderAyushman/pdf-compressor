@@ -4,44 +4,47 @@ import { saveAs } from 'file-saver';
 
 const ExcelToPdf = () => {
     const [file,setFile]=useState(null);
-    const pdfResponse=(data)=>{
+    
+    const handleOnChange = (e) => {
+       
+        setFile(e.target.files[0]);
+
+    }
+
+    const handlePdfResponse = (data) => {
         const blob = new Blob([data], { type: 'application/pdf' });
         saveAs(blob, 'Ayh-' + Date.now() + '.pdf');
 
-    }
-    const handleOnChange=async(e)=>{
-        setFile(e.target.files[0]);
-      
+
     }
 
-    useEffect(()=>{
-       async function fatchData(){
+    const handleOnSumbit = async (event) => {
         try {
-           
-            const formData=new FormData();
-            formData.append('xlsxFile',file);
-            const response= await axios.post('http://localhost:9100/upload',formData,{
-                responseType:'arraybuffer',
-                headers:{
-                    "Content-Type":"multipart/form-data",
+            event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('file', file);
+            const response = await axios.post('https://excel-to-pdf-flask.vercel.app/api/upload', formData, {
+                responseType: 'arraybuffer',
+                headers: {
+                    'Content-Type': 'multipart/form-data',
                 },
-    
-            }
-            );
-            pdfResponse(response.data);
-    
-           } catch (error) {
-            console.log(error);
-           }
+                
+            });
+            handlePdfResponse(response.data);
 
 
-       }
-       fatchData();
-    },file);
+        } catch (error) {
+            console.log(error)
+
+        }
+
+    }
 
 
     return (
         <>  
+            <form className='row g-3 ' onSubmit={handleOnSumbit}>
             <h1>Excel to PDF</h1>
             <p>Convert  high-quality Excel file to PDF files for free online. No installation is required to use.</p>
             <div className="rh8nkv-3 gcKsMX">
@@ -53,7 +56,7 @@ const ExcelToPdf = () => {
                                 <div className="sc-8s01yt-1 vma-Dc">
                                     <form className="sc-16z3mvs-1 GbsEV">
                                         <label className="sc-16z3mvs-2 ecBcC">
-                                            <input type="file" id='__picker-input' name='xlsxFile' onChange={handleOnChange} className='sc-16z3mvs-0 kbLfHX' accept='.xlsx' />
+                                            <input type="file" id='__picker-input' name='file' onChange={handleOnChange} className='sc-16z3mvs-0 kbLfHX' accept='.xlsx ,.xls' />
                                             <div className="sc-8s01yt-2 fLFedC">
                                                 <div className="sc-8s01yt-4 GrhAj">
                                                     <div className="sc-2xfn8l-0 bWaBkl sc-1ohxvl7-0 kvbqhA">
@@ -85,6 +88,9 @@ const ExcelToPdf = () => {
                 </div>
 
             </div>
+                
+                <button type='sumbit'>Upload</button>
+            </form>
         </>
     )
 }

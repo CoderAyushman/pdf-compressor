@@ -70,7 +70,7 @@ const Navv = () => {
           <li className='nav-link' ><NavLink className='nav-link' to="/compresspdf"><h5>CompressPdf</h5></NavLink></li>
           <li className='nav-link' ><NavLink className='nav-link' to="/image-to-pdf"><h5>Image To Pdf</h5></NavLink></li> 
           <li className='nav-link' ><NavLink className='nav-link' to="/docx-to-pdf"><h5>Docx To Pdf</h5></NavLink></li>
-
+          <li className='nav-link' ><NavLink className='nav-link' to="/excel-to-pdf"><h5>Excel To Pdf</h5></NavLink></li>
           </Nav>
         </Navbar.Collapse>
       </Container>

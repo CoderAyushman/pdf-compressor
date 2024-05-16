@@ -12,14 +12,14 @@ const Home = () => {
                 </p>
             </div>
             <div className="im">
-                <img src="https://s.smallpdf.com/static/cms/f/102628/x/884c595ea1/220902_flexiblecompression.svg" alt="" height="400" width="300" />
+                <img className='img-home' src="https://s.smallpdf.com/static/cms/f/102628/x/884c595ea1/220902_flexiblecompression.svg" alt=""  />
             </div>
             <div className="p1">
                 <h2>Flexible PDF Compression</h2>
                 <p>Quick, professional results you can trust—every time. Choose from two compression levels to adapt your file size without ever compromising on document quality.
                 </p>
                 <div className="im">
-                    <img src="https://s.smallpdf.com/static/cms/f/102628/x/2e05c5fd83/220902_howtocompression.svg" alt="" height="400" width="300"/>
+                    <img className='img-home' src="https://s.smallpdf.com/static/cms/f/102628/x/2e05c5fd83/220902_howtocompression.svg" alt=""/>
                 </div>
             </div>
             <div className="p1">
@@ -27,7 +27,7 @@ const Home = () => {
                 <p>We take your file, remove repetitive patterns, re-encode heavy images, and voilà—the result is a high-quality, but much lighter PDF. Done in a flash, so you can get work done even faster.
                 </p>
                 <div className="im">
-                    <img src="https://s.smallpdf.com/static/cms/f/102628/x/cffa26245f/220902_easysharing.svg" alt="" height="400" width="300"/>
+                    <img className='img-home' src="https://s.smallpdf.com/static/cms/f/102628/x/cffa26245f/220902_easysharing.svg" alt="" />
                 </div>
             </div>
             <div className="p1">
@@ -35,7 +35,7 @@ const Home = () => {
                 <p>Collaboration is essential for teamwork and getting things done. Once you reduce the size of your PDF, it’s super simple to share it with your team or a client. Just use our share feature to generate a quick download link.
                 </p>            </div>
             <div className="im">
-                <img src="https://s.smallpdf.com/static/cms/f/102628/x/3153718e1e/220902_howtopdfie.svg" alt="" height="400" width="300"/>
+                <img className='img-home' src="https://s.smallpdf.com/static/cms/f/102628/x/3153718e1e/220902_howtopdfie.svg" alt=""/>
             </div>
          </div>
             

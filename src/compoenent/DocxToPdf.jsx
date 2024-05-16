@@ -24,7 +24,7 @@ const DocxToPdf = () => {
 
             const formData = new FormData();
             formData.append('docx', pdfFile);
-            const response = await axios.post('http://localhost:5000/api/upload', formData, {
+            const response = await axios.post('https://docx-to-pdf-flask-2.vercel.app/api/upload', formData, {
                 responseType: 'arraybuffer',
                 headers: {
                     'Content-Type': 'multipart/form-data',
